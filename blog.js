@@ -2,7 +2,7 @@ const express = require('express');
 
 const cookieParser = require('cookie-parser');
 
-const port = 8002;
+const port = process.env.PORT ||  3000 ;
 
 const server = express();
 

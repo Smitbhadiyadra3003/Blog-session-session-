@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "blog.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon blog.js"
+    "start": "node blog.js",
+    "dev": "nodemon blog.js -e js,ejs"
   },
   "author": "",
   "license": "ISC",
@@ -24,10 +24,12 @@
     "multer": "^1.4.4",
     "node": "^17.7.2",
     "node-red-contrib-moonnode": "^0.1.2",
-    "nodemon": "^2.0.16",
     "noty": "^3.2.0-beta-deprecated",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
     "password": "^0.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
   }
 }
