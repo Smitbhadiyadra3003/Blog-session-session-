@@ -1,0 +1,127 @@
+<% if(flash.success && flash.success.length> 0){ %>
+    <%=flash.success %>
+
+        <%}%>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"
+                integrity="sha512-lOrm9FgT1LKOJRUXF3tp6QaMorJftUjowOWiDcG5GFZ/q7ukof19V0HKx/GWzXCdt9zYju3/KhBNdCLzK8b90Q=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css"
+                integrity="sha512-0p3K0H3S6Q4bEWZ/WmC94Tgit2ular2/n0ESdfEX8l172YyQj8re1Wu9s/HT9T/T2osUw5Gx/6pAZNk3UKbESw=="
+                crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+            <!DOCTYPE html>
+            <html lang="en">
+
+            <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Document</title>
+                <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+                <link rel="stylesheet" type="text/css" href="/css/all.min.css">
+                <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+                <style>
+                    a {
+                        color: rgb(255, 255, 255) !important;
+                        background-color: rgb(0, 0, 0);
+                        margin-left: 20px;
+                        border-radius: 5px;
+
+                    }
+                </style>
+            </head>
+
+            <body>
+
+                <h1 class="text-center">welcome to the blog world</h1>
+
+                <a href="/logout">Log Out</a>
+                <table border="1">
+                    <form action="/insertdata" method="post" enctype="multipart/form-data">
+
+                        <tr>
+                            <td>Blog title</td>
+                            <td><input type="text" name="b_title"></td>
+                        </tr>
+                        <tr>
+                            <td>Blog </td>
+                            <td><textarea name="blog" cols="20" rows="6" id="blog"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td> Blogger Name</td>
+                            <td>
+                                <input type="text" name="blogger_name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Date</td>
+                            <td>
+                                <p id="date" class="d-inline-block" name="Date"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> Blog Type</td>
+
+                            <% var type=['news','helth','sport','AI']%>
+                                <td>
+                                    <select name="blog_type">
+
+                                        <% for(i=0;i<type.length; i++){%>
+
+                                            <option value="<%=type[i]%>">
+                                                <%=type[i]%>
+                                            </option>
+                                            </option>
+
+                                            <%}%>
+
+                                    </select>
+                                </td>
+                        </tr>
+                        <tr>
+                            <td> Enter your image here</td>
+                            <td> <input type="file" name="avatar"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" name="submit" value="submit">
+
+                            </td>
+                        </tr>
+
+                    </form>
+                </table>
+
+
+                <script>
+
+                    var currentDate = new Date();
+                    var d = currentDate.getDate() + "-" + (currentDate.getMonth() + 1) + "-" + currentDate.getFullYear();
+                    document.getElementById('date').innerHTML = d;
+
+
+
+        <% if (flash.success && flash.success.length > 0) {%>
+
+
+                        new Noty({
+
+                            text: ' <%=flash.success %>',
+                            type: ' metroui',
+                            layout: 'topRight',
+                            timeout: 1500
+                        }).show();
+
+               <%}%>
+
+
+
+
+                </script>
+                <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+
+            </body>
+
+            </html>

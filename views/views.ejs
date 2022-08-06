@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"  type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/all.min.css">
+    <link rel="stylesheet"  type="text/css" href="/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="d-flex flex-wrap">
+
+  
+
+        <% for(var key of record){  %>
+            <div  class="mx-1  bg-info  mb-2">
+              <p> Blog title:-<%=key.b_title%></p>
+              <p>Blogger name:-<%=key.blogger_name%></p>
+              <p>Blog Date:-<%=key.Date%></p>
+              <img src="<%=key.avatar%>" height="100">
+              <p>Blog Type:-<%=key.blog_type%></p>
+              <p>Blog:- <%=key.blog%>....</p>
+              <a href="/deletedata/<%=key.id%>">delete</a>
+              <a href="/updatedata/<%=key.id%>">Update</a>
+            </div>
+      
+        
+        <%}%>
+
+        </div>
+
+    
+    
+        <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>   
+        
+    </body>
+</html>
+

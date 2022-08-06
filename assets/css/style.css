@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.body{
+        text-decoration: none;
+        position: relative;
+        font-family: 'Roboto', sans-serif;
+        background-color: aqua;
+}
+
+
+a{
+    text-decoration: none !important;
+    color: white !important;
+
+}

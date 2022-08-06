@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"  type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/all.min.css">
+    <link rel="stylesheet"  type="text/css" href="/css/style.css">
+</head>
+<body>
+
+    <h1 class="text-center">welcome to the blog world</h1>
+
+     <form action="/editdata" method="post" enctype="multipart/form-data">
+        <div >
+            Blog Id:- <input type="text" name="blog_id"  value="<%=single.id%>">
+            Blog title:- <input type="text" name="b_title" value="<%=single.b_title%>"><br>
+            Blog:- <textarea name="blog" cols="20" rows="6"  id="blog" value="<%=single.blog%>"></textarea><br>
+            Blogger Name:- <input type="text" name="blogger_name" value="<%=single.blogger_name%>"><br>
+            Date:- <p id="date" class="d-inline-block" name="Date" value="<%=single.Date%>"></p><br>
+    
+           <%  var type=['news','helth','sport','AI']%>
+            Blog Type:- <select name="blog_type"  value="<%=single.blog_type%>" >
+    
+                <% for(i=0;i<type.length; i++){%>
+    
+                    <option value="<%=type[i]%>"> <%=type[i]%></option></option>
+                    
+                <%}%>
+    
+            </select><br>   
+
+             Enter your image here:-<input type="file" name="avatar" ><br>
+             <img src="<%=single.avatar%>" height="100">
+
+            <input type="submit" name="submit" value="submit">
+         </div>
+    
+     </form>
+
+
+     <script>
+
+         var currentDate= new Date();
+         var d=currentDate.getDate() + "-" + (currentDate.getMonth() + 1) + "-" + currentDate.getFullYear();
+         document.getElementById('date').innerHTML=d ;
+
+
+        
+          
+     </script>
+    <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>   
+
+</body>
+</html>
+  

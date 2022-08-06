@@ -1,0 +1,33 @@
+{
+  "name": "blog-system",
+  "version": "1.0.0",
+  "main": "blog.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon blog.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "cookie": "^0.5.0",
+    "cookie-parser": "^1.4.6",
+    "cookie-session": "^2.0.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "flash-messages": "^0.0.4",
+    "js": "^0.1.0",
+    "mongodb": "^4.6.0",
+    "mongoose": "^6.3.3",
+    "multer": "^1.4.4",
+    "node": "^17.7.2",
+    "node-red-contrib-moonnode": "^0.1.2",
+    "nodemon": "^2.0.16",
+    "noty": "^3.2.0-beta-deprecated",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "password": "^0.1.1"
+  }
+}
