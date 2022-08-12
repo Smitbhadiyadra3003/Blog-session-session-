@@ -222,17 +222,17 @@ module.exports.editdata = function (req, res) {
 }
 
 
-module.exports.loginpage = function (req, res) {
+module.exports.loginpage = function (req,res) {
 
     Blog.create({
+
         e_mail: req.body.e_mail,
         password: req.body.password,
         c_password: req.body.c_password
 
     }, function (err, data) {
 
-        if (err) {
-
+        if(err) {
             console.log("data not inserted");
             return false;
         }

@@ -55,12 +55,6 @@ const avatar_path =path.join('/avatars/img');
         require:true
     },
 
-    c_password:{
-
-
-        type:String,
-        require:true
-    },
 
     avatar:{
     
