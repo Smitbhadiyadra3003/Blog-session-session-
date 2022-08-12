@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(  process.env.DB_url ||' mongodb://localhost/blogdata');
+mongoose.connect=process.env.DB_url;
 
 const db = mongoose.connection;
 

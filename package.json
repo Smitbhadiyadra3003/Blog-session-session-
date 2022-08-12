@@ -4,7 +4,7 @@
   "main": "blog.js",
   "scripts": {
     "start": "node blog.js",
-    "dev": "nodemon blog.js -e js,ejs"
+    "dev": "env-cmd -f config/dev.env nodemon blog.js -e js,ejs"
   },
   "author": "",
   "license": "ISC",
@@ -30,6 +30,7 @@
     "password": "^0.1.1"
   },
   "devDependencies": {
+    "env-cmd": "^10.1.0",
     "nodemon": "^2.0.19"
   }
 }
