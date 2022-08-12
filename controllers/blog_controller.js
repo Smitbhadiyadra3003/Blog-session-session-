@@ -54,7 +54,7 @@ module.exports.insertdata = function (req, res) {
             }, function (err, data) {
 
                 if (err) {
-
+                    
                     console.log("data not inserted");
                     return false;
                 }
@@ -233,6 +233,7 @@ module.exports.loginpage = function (req,res) {
     }, function (err, data) {
 
         if(err) {
+            console.log(err);
             console.log("data not inserted");
             return false;
         }
